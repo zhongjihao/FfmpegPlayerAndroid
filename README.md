@@ -1,0 +1,2 @@
+# FfmpegPlayerAndroid
+Android平台下基于Ffmpeg播放本地MP4的简单Demo
