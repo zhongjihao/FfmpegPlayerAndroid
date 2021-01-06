@@ -1,22 +1,21 @@
-# FfmpegPlayerAndroid
 Android平台下基于Ffmpeg播放本地MP4的简单Demo
 
-编译Android平台各个CPU架构的Ffmpeg动态库的步骤
-环境 Ubuntu 16.04
+编译Android平台各个CPU架构的Ffmpeg动态库的步骤 \
+环境 Ubuntu 16.04 \
 NDK版本 android-ndk-r14b
 
-下载FFmpeg
+下载FFmpeg \
 git clone https://git.ffmpeg.org/ffmpeg.git
 
 编译armv7-a版本动态库脚本build_android_ffmpeg_armv7a.sh内容
 
 #!/bin/bash
 
-NDK_PATH=/opt/android/android-ndk-r14b
-SYSROOT=$NDK_PATH/platforms/android-21/arch-arm
-TOOLCHAIN=$NDK_PATH/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64
-CPU=armeabi-v7a
-mkdir -p $(pwd)/android_build_out/$CPU
+NDK_PATH=/opt/android/android-ndk-r14b \
+SYSROOT=$NDK_PATH/platforms/android-21/arch-arm \
+TOOLCHAIN=$NDK_PATH/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64 \
+CPU=armeabi-v7a \
+mkdir -p $(pwd)/android_build_out/$CPU \
 PREFIX=$(pwd)/android_build_out/$CPU
 
 function build_android {
@@ -48,8 +47,8 @@ function build_android {
 build_android
 
 
-执行./build_android_ffmpeg_armv7a.sh
-make -j8
+执行./build_android_ffmpeg_armv7a.sh \
+make -j8 \
 make install
 
 
@@ -57,14 +56,15 @@ make install
 
 #!/bin/bash
 
-NDK_PATH=/opt/android/android-ndk-r14b
-SYSROOT=$NDK_PATH/platforms/android-21/arch-arm64
-TOOLCHAIN=$NDK_PATH/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64
-CPU=arm64-v8a
-mkdir -p $(pwd)/android_build_out/$CPU
+NDK_PATH=/opt/android/android-ndk-r14b \
+SYSROOT=$NDK_PATH/platforms/android-21/arch-arm64 \
+TOOLCHAIN=$NDK_PATH/toolchains/aarch64-linux-android-4.9/prebuilt/linux-x86_64 \
+CPU=arm64-v8a \
+mkdir -p $(pwd)/android_build_out/$CPU \
 PREFIX=$(pwd)/android_build_out/$CPU
 
 build_android(){
+
     ./configure \
     --prefix=$PREFIX \
     --target-os=android \
@@ -92,8 +92,8 @@ build_android(){
 build_android
 
 
-执行./build_android_ffmpeg_armv8a.sh
-make -j8
+执行./build_android_ffmpeg_armv8a.sh \
+make -j8 \
 make install
 
 
