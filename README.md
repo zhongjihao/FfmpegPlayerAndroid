@@ -1,4 +1,9 @@
+如果您觉得该项目对您有用，请扫描以下二维码打赏1元，多多支持
+
+![image](https://github.com/zhongjihao/FfmpegPlayerAndroid/blob/main/1981024614.jpg)
+
 Android平台下基于Ffmpeg播放本地MP4的简单Demo
+
 
 编译Android平台各个CPU架构的Ffmpeg动态库的步骤 \
 环境 Ubuntu 16.04 \
@@ -99,5 +104,6 @@ make install
 
 将编译出来的动态库和头文件拷贝到工程FfmpegPlayerAndroid下jni下ffmpeg目录中
 
-AS编译运行即可
+AS编译运行即可,运行截图如下 \
+![image](https://github.com/zhongjihao/FfmpegPlayerAndroid/blob/main/Screenshot_20210107-102458.png)
 
