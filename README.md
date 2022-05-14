@@ -2,6 +2,20 @@
 
 ![image](https://github.com/zhongjihao/FfmpegPlayerAndroid/blob/main/1981024614.jpg)
 
+
+
+openssl-3.0.3源码 在Android平台编译 \
+环境 Ubuntu 18.04 \
+NDK版本 android-ndk-r14b
+
+export ANDROID_NDK_ROOT=/opt/android/android-ndk-r14b \
+PATH=$ANDROID_NDK_ROOT/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin:$PATH \
+./Configure android-arm shared -latomic no-ssl2 no-ssl3 no-asm no-comp no-hw no-engine -D__ANDROID_API__=23 --prefix=/home/zhongjihao/workspace/DDS/install \
+make -j8 \
+sudo make install
+
+
+
 Android平台下基于Ffmpeg播放本地MP4的简单Demo
 
 
